@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--Deklarasi tipe dokumen HTML5-->
+
+<html lang="en">
+<!-- Elemen utama halaman HTML -->
+<!-- Atribut lang="en" menunjukkan bahasa halaman (English) -->
+
+<head>
+ <!-- Bagian "kepala" halaman, berisi metadata, judul, font, dan style internal -->
+   
+    <meta charset="UTF-8">
+    <!-- Menentukan encoding karakter agar teks tampil dengan benar -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agar tampilan halaman responsif di berbagai perangkat -->
+    
+    <title>Kabupaten Wonosobo</title>
+    <!-- Judul halaman yang muncul di tab browser -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Menghubungkan font Poppins dari Google Fonts -->
+
+    <style>
+    /* Style internal halaman */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #ffffff
+        }
+
+        .contentwrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+            background-color: rgb(255, 151, 47);
+            padding-bottom: 10px;
+        }
+
+        .contentwrapper1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            background-color: beige;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
+
+        .logo{
+            width:25%;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .judul{
+            width:75%; 
+            margin:0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1;
+            color:rgb(255, 255, 255);
+            max-width: 500%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+
+        }
+        h2 {
+            font-size: 30px;
+        }
+
+        .menu{
+            display: flex;
+            gap: 15px;
+            justify-content:center;
+            width: 100%;
+        }
+
+        .menu-btn{
+            background-color: #f57c00;
+            color: white;
+            border: none;
+            padding: 15px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .menu-btn:hover{
+            background-color: #e86d00;
+            transform: translateY(-3px);
+        }
+
+        .content {
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+            max-height: 0; 
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            display: block;
+        }
+
+        .content.show {
+            max-height: 5000px; 
+            opacity: 1;
+        }
+
+        .content table{
+            margin: 0 auto;
+            border-collapse: collapse; 
+            width: 80%; 
+            text-align: center;
+            padding-bottom: 30%;
+        }
+
+        .table-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content tr, th, td {
+            padding: 8px;
+            border: 2px solid #000;
+        }
+
+        caption{
+            caption-side: top;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- Bagian utama halaman yang tampil di layar -->
+
+    <div class="contentwrapper">
+    <!-- Wrapper atas berisi logo dan judul -->
+        <div class="logo"> 
+            <img src="logo_kabupaten_wonosobo.png" width="90" height="100">
+            <!-- Menampilkan logo kabupaten -->
+        </div>
+
+        <div class="judul">
+            <h1>SISTEM INFORMASI STATISTIK</h1>
+            <h2>KABUPATEN WONOSOBO</h2>
+            <!-- Judul utama dan subjudul halaman -->
+         </div>
+    </div>
+
+    <div class="contentwrapper1">
+    <!-- Wrapper untuk menu dan konten tabel -->
+
+        <div class="menu">
+        <!-- Tombol menu untuk menampilkan tabel tertentu -->
+            <button class="menu-btn" onclick="showMenu('Penduduk')">
+                Penduduk
+            </button>
+
+            <button class="menu-btn" onclick="showMenu('Geografi')">
+                Geografi
+            </button>
+
+            <button class="menu-btn" onclick="showMenu('Pemerintahan')">
+                Pemerintahan
+            </button>
+        </div>
+
+    <div class="table-container">
+    <!-- Container semua tabel -->
+
+            <div id="Penduduk" class="content">
+            <!-- Tabel data penduduk -->
+                <table border = 2>
+                    <caption>Tabel Luas Wilayah, Jumlah Penduduk, dan Kepadatan Penduduk Menurut Kecamatan di Kabupaten Wonosobo, 2024</caption>
+                    <tr>
+                        <th>KECAMATAN</th>
+                        <th>LUAS WILAYAH (km^2/sq.km)</th>
+                        <th>JUMLAH PENDUDUK</th>
+                        <th>KEPADATAN PENDUDUK</th>
+                    </tr>
+                    <tr>
+                        <td>Wadaslintang</td>
+                        <td>113,28</td>
+                        <td>63.599</td>
+                        <td>477</td>
+                    </tr>
+                    <tr>
+                        <td>Kepil</td>
+                        <td>100,23</td>
+                        <td>67.118</td>
+                        <td>670</td>
+                    </tr>
+                    <tr>
+                        <td>Sapuran</td>
+                        <td>74,92</td>
+                        <td>63.481</td>
+                        <td>847</td>
+                    </tr>
+                    <tr>
+                        <td>Kalibawang</td>
+                        <td>74,92</td>
+                        <td>28.859</td>
+                        <td>553</td>
+                    </tr>
+                    <tr>
+                        <td>Kaliwiro</td>
+                        <td>101,45</td>
+                        <td>54.501</td>
+                        <td>537</td>
+                    </tr>
+                    <tr>
+                        <td>Leksono</td>
+                        <td>45,10</td>
+                        <td>48.589</td>
+                        <td>1.077</td>
+                    </tr>
+                    <tr>
+                        <td>Sukoharjo</td>
+                        <td>56,77</td>
+                        <td>36.759</td>
+                        <td>648</td>
+                    </tr>
+                    <tr>
+                        <td>Selomerto</td>
+                        <td>41,44</td>
+                        <td>56.554</td>
+                        <td>1.365</td>
+                    </tr>
+                    <tr>
+                        <td>Kalikajar</td>
+                        <td>80,52</td>
+                        <td>75.009</td>
+                        <td>932</td>
+                    </tr>
+                    <tr>
+                        <td>Kertek</td>
+                        <td>63,66</td>
+                        <td>94.947</td>
+                        <td>1.491</td>
+                    </tr>
+                    <tr>
+                        <td>Wonosobo</td>
+                        <td>29,28</td>
+                        <td>94.584</td>
+                        <td>3.230</td>
+                    </tr>
+                    <tr>
+                        <td>Watumalang</td>
+                        <td>64,57</td>
+                        <td>58.059</td>
+                        <td>899</td>
+                    </tr>
+                    <tr>
+                        <td>Mojotengah</td>
+                        <td>48,94</td>
+                        <td>70.541</td>
+                        <td>1.441</td>
+                    </tr>
+                    <tr>
+                        <td>Garung</td>
+                        <td>53,89</td>
+                        <td>60.128</td>
+                        <td>1.116</td>
+                    </tr>
+                    <tr>
+                        <td>Kejajar</td>
+                        <td>65,38</td>
+                        <td>47.778</td>
+                        <td>731</td>
+                    </tr>
+                </table>
+            </div>
+
+        <div id="Geografi" class="content">
+        <!-- Tabel data geografi -->
+                <table border = 2>
+                    <caption>Tabel Jumlah Curah Hujan, Jumlah Hari Hujan, dan Penyinaran Matahari</caption>
+                    <tr>
+                        <th>BULAN</th>
+                        <th>JUMLAH CURAH HUJAN (mm^3)</th>
+                        <th>JUMLAH HARI HUJAN</th>
+                        <th>PENYINARAN MATAHARI (%)</th>
+                    </tr>
+                    <tr>
+                        <td>Januari</td>
+                        <td>756,80</td>
+                        <td>26</td>
+                        <td>43,30</td>
+                    </tr>
+                    <tr>
+                        <td>Februari</td>
+                        <td>641,70</td>
+                        <td>23</td>
+                        <td>44,60</td>
+                    </tr>
+                    <tr>
+                        <td>Maret</td>
+                        <td>420,50</td>
+                        <td>25</td>
+                        <td>38,70</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>596,00</td>
+                        <td>23</td>
+                        <td>36,80</td>
+                    </tr>
+                    <tr>
+                        <td>Mei</td>
+                        <td>233,50</td>
+                        <td>10</td>
+                        <td>45,50</td>
+                    </tr>
+                    <tr>
+                        <td>Juni</td>
+                        <td>212,50</td>
+                        <td>14</td>
+                        <td>51,50</td>
+                    </tr>
+                    <tr>
+                        <td>Juli</td>
+                        <td>22,00</td>
+                        <td>3</td>
+                        <td>56,50</td>
+                    </tr>
+                    <tr>
+                        <td>Agustus</td>
+                        <td>9,20</td>
+                        <td>4</td>
+                        <td>56,30</td>
+                    </tr>
+                    <tr>
+                        <td>September</td>
+                        <td>108,50</td>
+                        <td>11</td>
+                        <td>43,20</td>
+                    </tr>
+                    <tr>
+                        <td>Oktober</td>
+                        <td>124,80</td>
+                        <td>11</td>
+                        <td>50,40</td>
+                    </tr>
+                    <tr>
+                        <td>November</td>
+                        <td>211,00</td>
+                        <td>24</td>
+                        <td>37,30</td>
+                    </tr>
+                    <tr>
+                        <td>Desember</td>
+                        <td>161,00</td>
+                        <td>24</td>
+                        <td>28,00</td>
+                    </tr>
+                </table>
+        </div>
+
+        <div id="Pemerintahan" class="content">
+        <!-- Tabel data pemerintahan -->
+                <table border = 2>
+                    <caption>Tabel Jumlah Desa/Kelurahan Menurut Kecamatan di Kabupaten Wonosobo, 2024</caption>
+                    <tr>
+                        <th>KECAMATAN</th>
+                        <th>DESA</th>
+                        <th>KELURAHAN</th>
+                        <th>JUMLAH</th>
+                    </tr>
+                    <tr>
+                        <td>Wadaslintang</td>
+                        <td>16</td>
+                        <td>1</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Kepil</td>
+                        <td>20</td>
+                        <td>1</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Sapuran</td>
+                        <td>16</td>
+                        <td>1</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Kalibawang</td>
+                        <td>8</td>
+                        <td>-</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Kaliwiro</td>
+                        <td>20</td>
+                        <td>1</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Leksono</td>
+                        <td>13</td>
+                        <td>1</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Sukoharjo</td>
+                        <td>17</td>
+                        <td>-</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Selomerto</td>
+                        <td>22</td>
+                        <td>2</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Kalikajar</td>
+                        <td>18</td>
+                        <td>1</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Kertek</td>
+                        <td>19</td>
+                        <td>2</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Wonosobo</td>
+                        <td>7</td>
+                        <td>13</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Watumalang</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>Mojotengah</td>
+                        <td>16</td>
+                        <td>3</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Garung</td>
+                        <td>14</td>
+                        <td>1</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Kejajar</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>16</td>
+                    </tr>
+                     <tr>
+                        <td><b>Wonosobo</b></td>
+                        <td><b>236</b></td>
+                        <td><b>29</b></td>
+                        <td><b>265</b></td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+
+    <script>
+    /* Script untuk menampilkan atau menyembunyikan tabel sesuai tombol diklik */
+        function showMenu(menuId) {
+        const el = document.getElementById(menuId);
+
+        if (el.classList.contains('show')) {
+            el.classList.remove('show');
+        // Jika sudah tampil, sembunyikan
+
+        } else {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('show'));
+            // Tutup semua konten lainnya
+            el.classList.add('show'); 
+            // Tampilkan konten yang diklik
+        }
+        }
+    </script>
+</body>
+</html>
